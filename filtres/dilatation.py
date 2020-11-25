@@ -1,5 +1,4 @@
 from pathlib import Path
-
 import cv2
 import numpy as np
 
@@ -16,5 +15,5 @@ def dilatation():
     except cv2.error:
         if not img.exists():
             print(f"Ce fichier n'existe pas  \n")
-        elif img.name.split(".")[1] != 'png' and img.name.split(".")[1] != 'jpg':
+        elif not img.name.endswith(('.png', '.jpg')):
             print(f"Dilatation -> Le fichier n'est pas en bon format : {img.name.split('.')[1]} !")
