@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 
 
-def dilatation(image):
+def dilatation(image, iterations):
     kernel = np.ones((5, 5), np.uint8)
-    dilatation = cv2.dilate(image, kernel, iterations=1)
+    dilatation = cv2.dilate(image, kernel, iterations=iterations)
     return dilatation
 
