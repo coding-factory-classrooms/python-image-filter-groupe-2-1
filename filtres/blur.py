@@ -16,5 +16,5 @@ def blur():
             print(f'Le blur est pair ou négatif \n')
         elif not img.exists():
             print(f"Ce fichier n'existe pas  \n")
-        elif img.name.split(".")[1] != 'png' and img.name.split(".")[1] != 'jpg':
+        elif not img.name.endswith(('.png', '.jpg')):
             print(f"Blur -> Le fichier n'est pas en bon format : {img.name.split('.')[1]} !")

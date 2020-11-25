@@ -1,7 +1,4 @@
-import cv2
-from filtres import blur
-from filtres import black_white as bw
-from filtres import dilatation
+from filtres import blur, black_white as bw, dilatation
 
 
 bw.black_white()
