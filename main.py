@@ -5,6 +5,13 @@ import logger as log
 
 
 def filter(input, output, filter):
+    """
+    Access "input" directory, read each files, modify each files, save files in other directory ("input")
+    and manage exceptions
+    :param input: as directory of the start
+    :param output: as directory of the end where are images save
+    :param filter: this are filters (as string)
+    """
     with os.scandir(input) as entries:
         if os.path.exists(input):
             for entry in entries:
