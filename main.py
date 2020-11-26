@@ -1,6 +1,6 @@
 import os
 import cv2
-from filtres import blur, black_white as bw, dilate
+from filtres import blur, black_white as bw, dilate, ze_team
 import logger as log
 
 
@@ -45,6 +45,9 @@ def filter(input, output, filter):
                             value_filter = 1
                         image = dilate.dilate(image, iterations=int(value_filter))
                         log.write_log("Applying a dilate filter ...")
+                    elif k.startswith("ze_team"):
+                        image = ze_team.ze_team(image)
+                        log.write_log("Applying a ze team filter ...")
                 resultat = cv2.imwrite(f'{output}/{entry.name}', image)
                 log.write_log(f"Save result image in {output}/{entry.name} : {resultat} !")
         else:
