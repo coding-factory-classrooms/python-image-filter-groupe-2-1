@@ -2,6 +2,13 @@ import sys
 import main
 import configparser
 
+"""
+The first condition can show a information menu.
+The second condition can check arguments and retrieve others arguments who will them send in the file main.py
+The third condition can check arguments, manage configuration file "image.ini" and retrieve arguments file
+    who will them send in the file main.py
+"""
+
 args = sys.argv
 print(f"args={args}")
 
