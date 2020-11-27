@@ -9,8 +9,8 @@ def ze_team(image):
     """
     font = cv2.FONT_HERSHEY_SIMPLEX
     org = (50, 300)
-    fontScale = 1
-    color = (255, 0, 0)
+    fontScale = 2
+    color = (255, 255, 255)
     thickness = 2
     ze_team = cv2.putText(image, 'Fab et Lena', org, font, fontScale, color, thickness, cv2.LINE_AA)
     return ze_team
